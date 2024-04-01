@@ -4,7 +4,7 @@ import pic1 from '../assets/gatau/Group.svg';
 export const P2 = () => {
   return (
     <div 
-        className='h-full w-full   bg-hijau grid gap-8 justify-center items-center md:grid-cols-2 lg:grid-cols-2  box-border p-8 '>
+        className='h-full w-full md:h-screen bg-hijau grid gap-8 justify-center items-center md:grid-cols-2 lg:grid-cols-2  box-border p-8 '>
         
         <div className='h-auto p-8 text-balance '>
             <h1 className='font-extrabold text-4xl'>ABOUT BIR</h1>
