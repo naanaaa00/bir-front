@@ -1,11 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 import App from "./App.jsx";
 import "./styles/index.css";
 import "./styles/tailwind.css";
 import "./styles/font.css";
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+import axios from "axios";
+axios.defaults.withCredentials = true;
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
+  // <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>
+  // </React.StrictMode>
 );

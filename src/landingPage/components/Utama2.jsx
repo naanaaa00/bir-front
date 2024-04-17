@@ -1,11 +1,11 @@
-import React from 'react';
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import logo from '../assets/Logod_BIR_1_1.png'
+import React from "react";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+// import logo from '../assets/Logod_BIR_1_1.png'
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export const Utama2 = () => {
@@ -16,33 +16,20 @@ export const Utama2 = () => {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-16 items-center md:justify-between  justify-center items-center">
               <div className="flex flex-shrink-0   ">
-                <img src={logo} className="h-34 w-28 text-center "/>
+                <img className="h-34 w-28 text-center " />
               </div>
               <div className="hidden sm:block sm:ml-6  justify-end">
                 <div className="flex space-x-8 ">
-                  <a
-                    href="#"
-                    className={classNames('hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium transition duration-300')}
-                    aria-current="page"
-                  >
+                  <a href="#" className={classNames("hover:bg-gray-700 hover:text-white", "rounded-md px-3 py-2 text-sm font-medium transition duration-300")} aria-current="page">
                     About Us
                   </a>
-                  <a
-                    href="#"
-                    className={classNames('hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium transition duration-300')}
-                  >
+                  <a href="#" className={classNames("hover:bg-gray-700 hover:text-white", "rounded-md px-3 py-2 text-sm font-medium transition duration-300")}>
                     Contact Us
                   </a>
-                  <a
-                    href="#"
-                    className={classNames('border-2 rounded-lg border-hijau2 py-2 px-6 font-bold hover:bg-hijau2 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium transition duration-300')}
-                  >
+                  <a href="/login" className={classNames("border-2 rounded-lg border-hijau2 py-2 px-6 font-bold hover:bg-hijau2 hover:text-white", "rounded-md px-3 py-2 text-sm font-medium transition duration-300")}>
                     Login
                   </a>
-                  <a
-                    href="#"
-                    className={classNames('border-2 rounded-lg border-hijau2 bg-hijau2 py-2 px-6 text-putih font-bold hover:bg-hijau hover:text-black', 'rounded-md px-3 py-2 text-sm font-medium transition duration-300')}
-                  >
+                  <a href="#" className={classNames("border-2 rounded-lg border-hijau2 bg-hijau2 py-2 px-6 text-putih font-bold hover:bg-hijau hover:text-black", "rounded-md px-3 py-2 text-sm font-medium transition duration-300")}>
                     Register
                   </a>
                 </div>
@@ -66,11 +53,7 @@ export const Utama2 = () => {
                 <Disclosure.Button className="sm:hidden relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
+                  {open ? <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> : <Bars3Icon className="block h-6 w-6" aria-hidden="true" />}
                 </Disclosure.Button>
               </div>
             </div>
@@ -78,29 +61,16 @@ export const Utama2 = () => {
 
           <Disclosure.Panel className="sm:hidden  flex justify-center items-center shadow-md bg-hijau">
             <div className="space-y-1 px-2 pb-3 pt-2 ">
-              <a
-                href="#"
-                className={classNames(' text-gray-700 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium')}
-                aria-current="page"
-              >
+              <a href="#" className={classNames(" text-gray-700 hover:bg-gray-700 hover:text-white", "block rounded-md px-3 py-2 text-base font-medium")} aria-current="page">
                 About Us
               </a>
-              <a
-                href="#"
-                className={classNames('text-gray-700 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium')}
-              >
+              <a href="#" className={classNames("text-gray-700 hover:bg-gray-700 hover:text-white", "block rounded-md px-3 py-2 text-base font-medium")}>
                 Contact Us
               </a>
-              <a
-                href="#"
-                className={classNames('text-gray-700 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium')}
-              >
+              <a href="#" className={classNames("text-gray-700 hover:bg-gray-700 hover:text-white", "block rounded-md px-3 py-2 text-base font-medium")}>
                 Login
               </a>
-              <a
-                href="#"
-                className={classNames('text-gray-700 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium')}
-              >
+              <a href="#" className={classNames("text-gray-700 hover:bg-gray-700 hover:text-white", "block rounded-md px-3 py-2 text-base font-medium")}>
                 Register
               </a>
             </div>
