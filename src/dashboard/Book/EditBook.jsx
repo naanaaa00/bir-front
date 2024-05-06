@@ -9,6 +9,7 @@ export const EditBook = () => {
   const [summary, setSummary] = useState("");
   const [music, setMusic] = useState("");
   const [image, setImage] = useState("");
+  const [preview, setPreview] = useState("");
   const [msg, setMsg] = useState("");
   const navigete = useNavigate();
   const { id } = useParams();
@@ -21,6 +22,7 @@ export const EditBook = () => {
         setSummary(response.data.summary);
         setMusic(response.data.music);
         setImage(response.data.image);
+        setPreview(response.data.url);
       } catch (error) {
         if (error.response) {
           setMsg(error.response.data.msg);
@@ -30,15 +32,29 @@ export const EditBook = () => {
     getBookById();
   }, [id]);
 
-  console.log(title);
+  const loadImage = (e) => {
+    const image = e.target.files[0];
+    setImage(image);
+    setPreview(URL.createObjectURL(image));
+  };
+
+  const loadMusic = (e) => {
+    const music = e.target.files[0];
+    setMusic(music);
+  };
+
   const updateBook = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("summary", summary);
+    formData.append("file", music);
+    formData.append("fileImage", image);
     try {
-      await axios.patch(`http://localhost:8080/books/${id}`, {
-        title,
-        summary,
-        music,
-        image,
+      await axios.patch(`http://localhost:8080/books/${id}`, formData, {
+        headers: {
+          "Content-type": "multipart/form-data",
+        },
       });
       Swal.fire({
         icon: "success",
@@ -63,9 +79,10 @@ export const EditBook = () => {
             <textarea value={summary} onChange={(e) => setSummary(e.target.value)} className="textarea textarea-warning w-full mb-6" placeholder="Summary"></textarea>
             <div className="p-2 flex sm:justify-around">
               <label className="text-lg">Music</label>
-              <input value={music} onChange={(e) => setMusic(e.target.value)} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3" />
+              <input onChange={loadMusic} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3" />
               <label className="text-lg">Image</label>
-              <input value={image} onChange={(e) => setImage(e.target.value)} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs" />
+              <input onChange={loadImage} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs" />
+              {preview && <img src={preview} alt="preview" className="w-20 h-20" />}
             </div>
             <div className="flex justify-center mt-8">
               <Link to={`/deleteBook`} className=" hover hover:bg-indigo-600 justify-self-center border-2 border-indigo-600 rounded-lg p-2 mr-10">

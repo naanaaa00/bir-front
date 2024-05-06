@@ -1,27 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Navbar.css";
-import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
-import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import AddIcon from "@mui/icons-material/Add";
-import PostAddIcon from "@mui/icons-material/PostAdd";
 import FolderDeleteIcon from "@mui/icons-material/FolderDelete";
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditCalendarIcon from "@mui/icons-material/EditCalendar";
-import EditIcon from "@mui/icons-material/Edit";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { logOut, reset } from "../../features/authSlice";
+import { useDispatch } from "react-redux";
 
 export const Navbar = () => {
   const [state, setState] = React.useState({
@@ -31,6 +25,14 @@ export const Navbar = () => {
     right: false,
   });
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const Logout = () => {
+    dispatch(logOut());
+    dispatch(reset());
+    navigate("/");
+  };
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
       return;
@@ -61,14 +63,14 @@ export const Navbar = () => {
             <ListItemText primary={"Add Book"} style={{ color: "white" }} />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <ListItemButton component={NavLink} to="/addPages">
             <ListItemIcon>
               <PostAddIcon style={{ color: "white" }} />
             </ListItemIcon>
             <ListItemText primary={"Add Pages"} style={{ color: "white" }} />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
 
       <List>
@@ -78,29 +80,29 @@ export const Navbar = () => {
             <ListItemIcon>
               <FolderDeleteIcon style={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText primary={"Delete Book"} style={{ color: "white" }} />
+            <ListItemText primary={"List Book"} style={{ color: "white" }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton component={NavLink} to="/deletePages">
             <ListItemIcon>
-              <DeleteIcon style={{ color: "white" }} />
+              <ListAltIcon style={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText primary={"Delete Page"} style={{ color: "white" }} />
+            <ListItemText primary={"List Page"} style={{ color: "white" }} />
           </ListItemButton>
         </ListItem>
       </List>
 
-      <List>
+      {/* <List>
         <Divider className="bg-slate-50" />
-        {/* <ListItem disablePadding>
+        <ListItem disablePadding>
                 <ListItemButton component={NavLink} to="/editBook">
                     <ListItemIcon>
                         <EditCalendarIcon style={{ color: 'white' }}/>
                     </ListItemIcon>
                     <ListItemText primary={"Edit Book"} style={{ color: 'white' }}/>
                 </ListItemButton>
-            </ListItem> */}
+            </ListItem>
         <ListItem disablePadding>
           <ListItemButton component={NavLink} to="/editPages">
             <ListItemIcon>
@@ -109,6 +111,19 @@ export const Navbar = () => {
             <ListItemText primary={"Edit Page"} style={{ color: "white" }} />
           </ListItemButton>
         </ListItem>
+      </List> */}
+      {/*  */}
+      <List>
+        <Divider className="bg-slate-50" />
+        <ListItem disablePadding>
+          <ListItemButton onClick={Logout}>
+            <ListItemIcon>
+              <LogoutIcon style={{ color: "white" }} />
+            </ListItemIcon>
+            <ListItemText primary={"Logout"} style={{ color: "white" }} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding></ListItem>
       </List>
     </Box>
   );
