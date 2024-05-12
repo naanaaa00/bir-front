@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "../navbar/Navbar";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { getMe } from "../../features/authSlice";
 
 export const AddBook = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isError } = useSelector((state) => state.auth);
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+  useEffect(() => {
+    if (isError) {
+      navigate("/login");
+    }
+  }, [isError, navigate]);
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [file, setMusic] = useState("");

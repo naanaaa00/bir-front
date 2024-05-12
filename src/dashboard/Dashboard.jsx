@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  
   const { isError } = useSelector((state) => state.auth);
   useEffect(() => {
     dispatch(getMe());
@@ -17,6 +18,7 @@ const Dashboard = () => {
       navigate("/login");
     }
   }, [isError, navigate]);
+
   return (
     <div>
       <Navbar />

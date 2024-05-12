@@ -1,9 +1,23 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "../navbar/Navbar";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getMe } from "../../features/authSlice";
 
 export const DeletePages = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isError } = useSelector((state) => state.auth);
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+  useEffect(() => {
+    if (isError) {
+      navigate("/login");
+    }
+  }, [isError, navigate]);
   const [pages, setPages] = useState([]);
 
   useEffect(() => {

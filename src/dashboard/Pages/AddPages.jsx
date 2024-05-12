@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "../navbar/Navbar";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useDispatch, useSelector } from "react-redux";
+import { getMe } from "../../features/authSlice";
 
 export const AddPages = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isError } = useSelector((state) => state.auth);
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+  useEffect(() => {
+    if (isError) {
+      navigate("/login");
+    }
+  }, [isError, navigate]);
   const [storytext, setStorytext] = useState("");
   const [image, setImage] = useState("");
   // const [relatedBookId, setRelatedBookId] = useState("");
   const [msg, setMsg] = useState("");
   const [preview, setPreview] = useState("");
   const { bookid } = useParams();
-
-  const navigate = useNavigate();
 
   const loadImage = (e) => {
     const image = e.target.files[0];

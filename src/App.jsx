@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./landingPage/LandingPage";
-import Login from "./login/index";
 import Dashboard from "./dashboard/Dashboard";
 import { AddBook } from "./dashboard/Book/AddBook";
 import { AddPages } from "./dashboard/Pages/AddPages";
@@ -18,7 +17,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login2 />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/addBook" element={<AddBook />} />
           <Route path="/addPages/:bookid" element={<AddPages />} />
@@ -26,8 +25,7 @@ const App = () => {
           <Route path="/editPages/:id" element={<EditPages />} />
           <Route path="/deleteBook" element={<DeleteBook />} />
           <Route path="/deletePages" element={<DeletePages />} />
-          <Route path="/baca" element={<Baca/>} />
-          <Route path="/login2" element={<Login2/>} />
+          <Route path="/baca" element={<Baca />} />
         </Routes>
       </BrowserRouter>
     </>
