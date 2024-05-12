@@ -9,6 +9,8 @@ import { DeleteBook } from "./dashboard/Book/DeleteBook";
 import { DeletePages } from "./dashboard/Pages/DeletePages";
 import { EditBook } from "./dashboard/Book/EditBook";
 import { EditPages } from "./dashboard/Pages/EditPages";
+import { Baca } from "./baca/Baca";
+import { Login2 } from "./login2/Login2";
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
           <Route path="/editPages/:id" element={<EditPages />} />
           <Route path="/deleteBook" element={<DeleteBook />} />
           <Route path="/deletePages" element={<DeletePages />} />
+          <Route path="/baca" element={<Baca/>} />
+          <Route path="/login2" element={<Login2/>} />
         </Routes>
       </BrowserRouter>
     </>
