@@ -42,6 +42,8 @@ export default {
         "10vh": "10vh",
         "85%": "85%",
         "80%": "80%",
+        "90vh": "90vh",
+        "30vh": "30vh",
       },
       boxShadow: { xs: "0px 3px  49px 9px #0000000f" },
       opacity: { 0.64: 0.64 },

@@ -14,7 +14,7 @@ export const Navbar = () => {
     <Disclosure as="nav" className="fixed w-full z-10">
       {({ open }) => (
         <>
-          <div className="  w-full h-16 mt-4">
+          <div className="  w-full h-10vh mt-4">
               <div className="hidden sm:block sm:ml-6  justify-end">
                 <div className=" flex my-1.5 justify-between">
                   <a href='/' className=''>
@@ -50,16 +50,18 @@ export const Navbar = () => {
             </div>
 
 
-          <Disclosure.Panel className="sm:hidden -mt-20 flex justify-center items-center shadow-md bg-hijau">
-            <div className="space-y-1 px-2 pb-3 pt-2 ">
-              <a href="#" className={classNames("text-gray-700 block rounded-md px-3 py-2 text-base font-medium")}>
-                Login
-              </a>
-              <a href="" className={classNames("text-gray-700 block rounded-md px-3 py-2 text-base font-medium")}>
-                Home
-              </a>
-            </div>
-          </Disclosure.Panel>
+            <Disclosure.Panel className="sm:hidden  flex justify-center items-center shadow-md bg-hijau h-30vh">
+          
+          <div className="space-y-1 px-2 pb-3 pt-2 text-center">
+            <a href="#" className=" text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
+              Login
+            </a>
+            <a href="#" className="text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
+              Home
+            </a>
+            
+          </div>
+        </Disclosure.Panel>
         </>
       )}
     </Disclosure>

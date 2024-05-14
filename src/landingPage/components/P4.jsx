@@ -13,25 +13,25 @@ export const P4 = () => {
 
       <div className='w-48 p-4 text-center'>
         <img src={project} className='mx-auto mb-3' style={{ width: '100px', height: '100px' }} />
-        <span className='block'>Completed Projects</span>
+        <span className='block text-black-900'>Completed Projects</span>
         <span className='block text-hfont font-bold text-4xl italic'>100 +</span>
       </div>
 
       <div className='w-48 p-4 text-center'>
         <img src={rating} className='mx-auto mb-3' style={{ width: '100px', height: '100px' }} />
-        <span className='block'>Customer Satisfaction</span>
+        <span className='block text-black-900'>Customer Satisfaction</span>
         <span className='block text-hfont font-bold text-4xl italic'>20 %</span>
       </div>
 
       <div className='w-48 p-4 text-center'>
         <img src={raise} className='mx-auto mb-3' style={{ width: '100px', height: '100px' }} />
-        <span className='block'>Raised by Clients</span>
+        <span className='block text-black-900'>Raised by Clients</span>
         <span className='block text-hfont font-bold text-4xl italic'> $10M</span>
       </div>
 
       <div className='w-48 p-4 text-center'>
         <img src={timeline} className='mx-auto mb-3' style={{ width: '100px', height: '100px' }} />
-        <span className='block'>Years in Business</span>
+        <span className='block text-black-900'>Years in Business</span>
         <span className='block text-hfont font-bold text-4xl italic'>2 yrs</span>
       </div>
     </div>

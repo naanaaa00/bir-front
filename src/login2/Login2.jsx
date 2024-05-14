@@ -24,11 +24,11 @@ export const Login2 = () => {
     dispatch(LoginUser({ email, password }));
   };
   const bgStyle = {
-    backgroundImage: `url(${foot})`, // using template literal to set the background image URL
+    backgroundImage: `url(${foot})`, 
   };
 
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-screen bg-white-A700">
       <div className="flex flex-col h-full">
         <div className="h-full w-full sm:h-3/4 sm:flex sm:justify-between">
           {/* form */}

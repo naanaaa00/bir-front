@@ -14,11 +14,11 @@ export const Utama = () => {
         />
         <div className=' text-center p-8'>
           <div className='flex flex-col'>
-            <span className='font-bold text-4xl'>BUKU INTERAKTIF</span>
-            <span className='font-bold text-4xl'>REMAJA</span>
+            <h1 className='font-bold text-4xl text-black-900'>BUKU INTERAKTIF</h1>
+            <h1 className='font-bold text-4xl text-black-900'>REMAJA</h1>
           </div>
           <div className="m-8 relative ">
-  <span   className="z-99 inline-block px-6 py-1 text-xl font-bold text-white bg-hijau2 border-2 border-hijau2 rounded-lg transition duration-300 hover:bg-hijau hover:text-black">
+  <span   className="z-99 inline-block px-6 py-1 text-xl font-bold text-black-900 bg-hijau2 border-2 border-hijau2 rounded-lg transition duration-300 hover:bg-hijau hover:text-black">
     <a href='/baca'>baca</a>
   </span>
 </div>
