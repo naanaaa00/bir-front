@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/deleteBook" element={<DeleteBook />} />
           <Route path="/deletePages" element={<DeletePages />} />
           <Route path="/baca" element={<Baca />} />
-          <Route path="/page" element={<Page />} />
+          <Route path="/books/:bookid/pages" element={<Page />} />
         </Routes>
       </BrowserRouter>
     </>

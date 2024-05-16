@@ -8,7 +8,7 @@ import { Utama } from "./components/Utama";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="bg-white-A700">
       <Utama />
       <P2 />
       <P3 />
