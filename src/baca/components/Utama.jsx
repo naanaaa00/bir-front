@@ -20,13 +20,13 @@ export const Utama = () => {
   }, []);
   return (
     <div className="h-screen py-20 px-7 bg-white flex flex-row bg-white-A700">
-      <div className="w-full h-full border-2 border-indigo-600 rounded-lg overflow-auto p-4">
+      <div className="w-full h-full border-2 border-gray-200 rounded-lg overflow-auto p-4">
         <div className="flex flex-wrap justify-center space-x-4">
           {book.map((book) => (
             <div key={book.bookid} className="card w-80 bg-base-100 shadow-xl m-2">
               <div className="flex flex-wrap justify-center space-x-4">
                 <div className="card w-80 bg-base-100 shadow-xl m-2">
-                  <figure>
+                  <figure cl>
                     <img src={`http://localhost:8080/uploads/${book.image}`} alt="" />
                   </figure>
                   <div className="card-body">

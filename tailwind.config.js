@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         candal: ["Candal"],
-        roboto: ["Roboto"],
+        roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
         hijau: "rgb(215, 245, 220)",

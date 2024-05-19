@@ -12,6 +12,7 @@ import { Baca } from "./baca/Baca";
 import { Login2 } from "./login2/Login2";
 import { Page } from "./pages/Page";
 
+
 const App = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login2 />} />
           <Route path="/dashboard" element={<Dashboard />} />
+
           <Route path="/addBook" element={<AddBook />} />
           <Route path="/addPages/:bookid" element={<AddPages />} />
           <Route path="/editBook/:id" element={<EditBook />} />

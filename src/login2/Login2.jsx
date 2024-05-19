@@ -28,7 +28,7 @@ export const Login2 = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-white-A700">
+    <div className="h-screen w-screen ">
       <div className="flex flex-col h-full">
         <div className="h-full w-full sm:h-3/4 sm:flex sm:justify-between">
           {/* form */}
@@ -50,7 +50,7 @@ export const Login2 = () => {
                   />
                   <label
                     htmlFor=""
-                    className=" absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0  peer-focus:text-hijau2 peer-focus:dark:text-hijau2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                    className=" absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0  peer-focus:text-hijau2 peer-focus:dark:text-hijau2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                   >
                     Email
                   </label>
@@ -59,14 +59,14 @@ export const Login2 = () => {
                 <div className=" relative my-4 w-full">
                   <input
                     type="password"
-                    className="block w-72 py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-gray-500 focus:border-blue-600 peer"
+                    className="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-gray-500 focus:border-blue-600 peer"
                     placeholder=""
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <label
                     htmlFor=""
-                    className=" absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0  peer-focus:text-hijau2 peer-focus:dark:text-hijau2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                    className=" absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0  peer-focus:text-hijau2 peer-focus:dark:text-hijau2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                   >
                     Password
                   </label>
@@ -78,7 +78,10 @@ export const Login2 = () => {
                 >
                   {isLoading ? "Loading..." : "Login"}
                 </button>
-              </form>
+                <a href="/" className="text-gray-400 font-xs rounded-lg cursor-pointer  py-2 transition-colors duration-500 flex items-center justify-center h-8 text-sm hover:text-green-500 hover:bg-white">
+  back to home
+</a>
+   </form>
 
               <img src={foot} className="sm:hidden" />
             </div>

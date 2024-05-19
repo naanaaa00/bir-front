@@ -40,7 +40,7 @@ export const DeleteBook = () => {
   return (
     <div className="flex flex-col">
       <Navbar />
-      <div className="overflow-x-auto overflow-auto border-2 border-indigo-600 self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl h-full">
+      <div className="overflow-x-auto overflow-auto border-2 border-indigo-600 self-center p-6 rounded-3xl md:justify-center my-14 shadow-2xl h-full mx-6">
         <table className="table">
           <thead>
             <tr>
@@ -57,7 +57,7 @@ export const DeleteBook = () => {
                 <th>{book.bookid}</th>
                 <td>{book.title}</td>
                 <td>{book.summary}</td>
-                <td>
+                <td className="flex space-x-2">
                   <Link to={`/editBook/${book.bookid}`} className="hover hover:bg-indigo-600 rounded-lg border-2 border-indigo-600 p-2">
                     edit
                   </Link>

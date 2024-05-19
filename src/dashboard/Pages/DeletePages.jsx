@@ -57,7 +57,7 @@ export const DeletePages = () => {
                 <th>{page.pageid}</th>
                 <td>{page.relatedBookId}</td>
                 <td>{page.storytext}</td>
-                <td>
+                <td className="flex space-x-2">
                   <Link to={`/editPages/${page.pageid}`} className="hover hover:bg-indigo-600 rounded-lg border-2 border-indigo-600 p-2">
                     edit
                   </Link>

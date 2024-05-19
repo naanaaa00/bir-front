@@ -20,11 +20,11 @@ export const Utama2 = () => {
               </div>
               <div className="hidden sm:block sm:ml-6  justify-end">
                 <div className="flex space-x-8 ">
-                <a href="#" class="text-black-900 rounded-md px-3 py-2 text-sm transition duration-300 font-bold hover:bg-yellow-300 ">
-                    About Us
+                <a href="#p2" class="text-black-900 rounded-md px-3 py-2 text-sm transition duration-300 font-bold hover:bg-yellow-300 ">
+                    About
                 </a>
 
-                  <a href="#" className="text-black-900 rounded-md px-3 py-2 text-sm font-bold transition duration-300 hover:bg-yellow-300 ">
+                  <a href="#p3" className="text-black-900 rounded-md px-3 py-2 text-sm font-bold transition duration-300 hover:bg-yellow-300 ">
                     Contact Us
                   </a>
                   <a href="/login" className="text-black-900 border-2 rounded-lg border-hijau2 py-2 px-6 font-bold transition duration-300 hover:bg-hijau2">
@@ -61,13 +61,13 @@ export const Utama2 = () => {
           <Disclosure.Panel className="sm:hidden  flex justify-center items-center shadow-md bg-hijau h-45vh">
           
             <div className="space-y-1 px-2 pb-3 pt-2 text-center">
-              <a href="#" className=" text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
+              <a href="#p2" className=" text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
                 About Us
               </a>
-              <a href="#" className="text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
+              <a href="#p3" className="text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
                 Contact Us
               </a>
-              <a href="#" className="text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
+              <a href="/login" className="text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
                 Login
               </a>
             </div>

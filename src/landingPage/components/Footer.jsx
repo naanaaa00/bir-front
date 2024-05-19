@@ -16,12 +16,6 @@ export const Footer = () => {
             <span className='text-xl font-semibold text-black-900'>Agency, Just a little description to</span>
             <span className='text-xl font-semibold text-black-900'>help people understand you better</span>
           </div>
-          <div className='flex mt-6'>
-            <img src={Fb} className='mr-4'/>
-            <img src={Twitter} className='mr-4'/>
-            <img src={Linked} className='mr-4'/>
-            <img src={Ig}/>
-          </div>
         </div>
       </div>
       <div className='p-4 lg:w-1/4'>

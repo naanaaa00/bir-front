@@ -34,24 +34,27 @@ export const Utama = () => {
   }, [bookid]);
 
   return (
-    <div className="h-full bg-white flex flex-col py-24 px-7 ">
-      <div className="w-full h-90vh border-2 border-indigo-600 rounded-lg overflow-auto p-4 mb-6">
-        <p className=" bg-red-900">{msg}</p>
-        <h1>{book.title}</h1>
-        {book.music && (
-          <audio controls preload="none">
-            <source src={`http://localhost:8080/uploads/${book.music}`} type="audio/mpeg" />
-          </audio>
-        )}
-        {pages.map((page) => (
-          <div key={page.pageid}>
-            <img src={`http://localhost:8080/uploads/${page.image}`} alt="" />
+  <div className="h-full bg-white flex flex-col py-24 px-7">
+    <div className="flex justify-between items-center  p-4">
+      
+      <h1 className="text-left  text-2xl font-bold">title: {book.title}</h1>
+      {book.music && (
+  <div className="flex items-center justify-center">
+    <audio controls className="outline-none">
+      <source src={`http://localhost:8080/uploads/${book.music}`} type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+)}
 
-            <p>{page.storytext}</p>
-          </div>
-        ))}
-      </div>
-      <div className="w-full h-90vh border-2 border-indigo-600 rounded-lg overflow-auto p-4"></div>
     </div>
+    {pages.map((page) => (
+    <div key={page.pageid} className="w-full border-2 border-gray-200 rounded-lg overflow-auto p-4 mb-6">
+      <p className="bg-red-900">{msg}</p>
+      <img src={`http://localhost:8080/uploads/${page.image}`} alt="" className="text-center mb-4 h-1/3 w-auto mx-auto" />
+      <p className=" h-2/3">{page.storytext}</p>
+    </div>
+  ))}
+  </div>
   );
 };
