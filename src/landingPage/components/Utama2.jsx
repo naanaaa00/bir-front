@@ -21,11 +21,11 @@ export const Utama2 = () => {
               <div className="hidden sm:block sm:ml-6  justify-end">
                 <div className="flex space-x-8 ">
                 <a href="#p2" class="text-black-900 rounded-md px-3 py-2 text-sm transition duration-300 font-bold hover:bg-yellow-300 ">
-                    About
+                    About BIR
                 </a>
 
                   <a href="#p3" className="text-black-900 rounded-md px-3 py-2 text-sm font-bold transition duration-300 hover:bg-yellow-300 ">
-                    Contact Us
+                    BIR Human
                   </a>
                   <a href="/login" className="text-black-900 border-2 rounded-lg border-hijau2 py-2 px-6 font-bold transition duration-300 hover:bg-hijau2">
                     Login
@@ -62,10 +62,10 @@ export const Utama2 = () => {
           
             <div className="space-y-1 px-2 pb-3 pt-2 text-center">
               <a href="#p2" className=" text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
-                About Us
+                About BIR
               </a>
               <a href="#p3" className="text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
-                Contact Us
+                BIR Human
               </a>
               <a href="/login" className="text-gray-700 hover:bg-yellow-300  block rounded-md px-3 py-2 text-base font-medium">
                 Login
