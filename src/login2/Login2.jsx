@@ -38,12 +38,12 @@ export const Login2 = () => {
                 <h3 className="text-hijau2 font-bold">Login to Your</h3>
                 <h3 className="text-hijau2 font-bold">Account</h3>
               </div>
-              <form onSubmit={Auth} className="flex flex-col items-center px-8 py-32">
+              <form onSubmit={Auth} className="flex flex-col items-center px-8 py-24 ">
                 {isError && <p className="text-red-500 bg-stone-100 text-sm text-center">{message}</p>}
-                <div className="relative my-4 w-full">
+                <div className="relative my-2 w-full ">
                   <input
                     type="email"
-                    className="block w-72 py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-white-A700 focus:border-blue-600 peer"
+                    className=" block w-72 py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-white-A700 focus:border-blue-600 peer"
                     placeholder=""
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}

@@ -38,38 +38,45 @@ export const DeletePages = () => {
   };
 
   return (
-    <div className="flex flex-col">
-      <Navbar />
-      <div className="overflow-x-auto overflow-auto border-2 border-indigo-600 self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl h-full">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>pageID</th>
-              <th>relatedBookId</th>
-              <th>storytext</th>
-            </tr>
-          </thead>
-          <tbody>
-            {pages.map((page, index) => (
-              <tr key={page.pageid}>
-                <th>{index + 1}</th>
-                <th>{page.pageid}</th>
-                <td>{page.relatedBookId}</td>
-                <td>{page.storytext}</td>
-                <td className="flex space-x-2">
-                  <Link to={`/editPages/${page.pageid}`} className="hover hover:bg-indigo-600 rounded-lg border-2 border-indigo-600 p-2">
-                    edit
-                  </Link>
-                  <button onClick={() => deletePage(page.pageid)} className="hover hover:bg-indigo-600 rounded-lg border-2 border-indigo-600 p-2">
-                    delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="flex flex-col  w-full h-screen overflow-hidden ">
+    <Navbar />
+
+    <div className="w-4/5 border-2 border-indigo-600 self-center rounded-3xl md:justify-center my-14  shadow-2xl h-full p-8 overflow-auto">
+      <table className="">
+        <thead>
+          <tr className="">
+            <th>No</th>
+            <th>pageID</th>
+            <th>relatedBookId</th>
+            <th>storytext</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody className="">
+  {pages.map((page, index) => (
+    <tr key={page.pageid} className="mb-16">
+      <td className="p-3 align-top">{index + 1}</td>
+      <td className="p-3 align-top">{page.pageid}</td>
+      <td className="p-3 align-top">{page.relatedBookId}</td>
+      <td className="break-words text-wrap text-justify p-2 align-top">
+        {page.storytext}
+      </td>
+      <td className="flex items-start space-x-2 p-2">
+        <Link to={`/editPages/${page.pageid}`} className="hover:bg-indigo-600 hover:text-white-A700 rounded-lg border-2 border-indigo-600 p-2">
+          edit
+        </Link>
+        <button onClick={() => deletePage(page.pageid)} className="hover:bg-indigo-600 hover:text-white-A700 rounded-lg border-2 border-indigo-600 p-2">
+          delete
+        </button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
+      </table>
     </div>
+    
+  </div>
+  
   );
 };
