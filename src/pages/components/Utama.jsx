@@ -49,14 +49,14 @@ export const Utama = () => {
 
     </div>
 
-    <div className="w-3/5 mx-auto ">
+    <div className="4/5 md:w-2/5 mx-auto ">
   {pages.map((page) => (
-    <div key={page.pageid} className="bg-white-A700 mb-4">
+    <div key={page.pageid} className="bg-white-A700 p-8">
       <p className="bg-red-900">{msg}</p>
       <img 
         src={`http://localhost:8080/uploads/${page.image}`} 
         alt={page.image} 
-        className="max-w-lg max-h-96  text-center mb-4 w-full mx-auto object-contain border-2 border-indigo-600" 
+        className=" text-center mb-4 w-full mx-auto object-contain " 
       />
       <p className="h-1/2  w-auto break-words text-wrap text-justify">
         {page.storytext}
