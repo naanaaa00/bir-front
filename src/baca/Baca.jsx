@@ -8,7 +8,7 @@ export const Baca = () => {
 <div>
     <Navbar />
     <Utama/>
-    <Footer/>
+    
 </div>
   );
 };

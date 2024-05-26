@@ -65,13 +65,13 @@ export const AddBook = () => {
   };
 
   return (
-    <div className=" flex flex-col ">
+    <div className=" flex flex-col h-screen ">
       <Navbar />
-      <div className="border-2 border-indigo-600 h-55vh w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
+      <div className="bg-neutral-100 border-2 border-neutral-400 h-55vh w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
         <form onSubmit={handleSubmit}>
           <p className=" bg-red-900">{msg}</p>
-          <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className="input w-full mb-6" />
-          <textarea value={summary} name="summary" onChange={(e) => setSummary(e.target.value)} className="textarea textarea-warning w-full mb-6" placeholder="Summary"></textarea>
+          <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className="input w-full mb-6 p-8" />
+          <textarea value={summary} name="summary" onChange={(e) => setSummary(e.target.value)} className="textarea textarea-warning w-full mb-6 h-32" placeholder="Summary"></textarea>
           <div className="p-2 flex sm:justify-around">
             <label className="text-lg">Music</label>
             <input type="file" onChange={loadMusic} className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3" />
@@ -80,7 +80,7 @@ export const AddBook = () => {
             {preview && <img src={preview} alt="preview" className="w-20 h-20" />}
           </div>
           <div className="grid justify-items-stretch mt-8">
-            <button type="submit" className="justify-self-center border-2 border-indigo-600 rounded-lg p-2">
+            <button type="submit" className="justify-self-center font-bold hover hover:border-neutral-600 hover:text-white-A700 hover:bg-neutral-600 rounded-lg p-2">
               Submit!
             </button>
           </div>

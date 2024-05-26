@@ -9,7 +9,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
-import "./Navbar.css";
 import AddIcon from "@mui/icons-material/Add";
 import FolderDeleteIcon from "@mui/icons-material/FolderDelete";
 import ListAltIcon from "@mui/icons-material/ListAlt";
@@ -129,7 +128,7 @@ export const Navbar = () => {
   );
   return (
     <div>
-      <div className="Navbar flex shadow-sm p-3 ">
+      <div className="Navbar flex shadow-sm p-3 bg-white-A700">
         {/* {['left', 'right', 'top', 'bottom'].map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>

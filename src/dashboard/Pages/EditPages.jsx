@@ -62,8 +62,8 @@ export const EditPages = () => {
   return (
     <div className="  flex flex-col">
       <Navbar />
-      <div className="self-center h-screen">
-        <div className="border-2 border-indigo-600 h-55vh w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
+      <div className=" self-center h-screen">
+        <div className="bg-neutral-100 border-2 border-indigo-600 h-55vh w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
           <p className=" bg-red-900">{msg}</p>
           <form onSubmit={updatePage}>
             <textarea value={storytext} onChange={(e) => setStorytext(e.target.value)} className="textarea textarea-warning w-full mb-6" placeholder="Summary"></textarea>

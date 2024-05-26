@@ -59,10 +59,10 @@ export const AddPages = () => {
   return (
     <div className=" flex flex-col">
       <Navbar />
-      <div className="border-2 border-indigo-600 h-45vh w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
+      <div className="bg-neutral-100 border-2 border-neutral-400 h-full w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
         <p className=" bg-red-900">{msg}</p>
         <form onSubmit={handleSubmit}>
-          <textarea value={storytext} name="storytext" onChange={(e) => setStorytext(e.target.value)} className="textarea textarea-warning w-full mb-6" placeholder="Summary"></textarea>
+          <textarea value={storytext} name="storytext" onChange={(e) => setStorytext(e.target.value)} className="textarea textarea-warning w-full h-60vh mb-6" placeholder="Summary"></textarea>
           <div className="p-2 flex flex-col sm:flex-row sm:justify-around">
             <input type="text" name="relatedBookId" className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3 mb-6" value={bookid} placeholder="relatedBookId" readOnly />
             <label className="text-lg">Image</label>
@@ -70,7 +70,7 @@ export const AddPages = () => {
             {preview && <img src={preview} alt="preview" className="w-20 h-20" />}
           </div>
           <div className="grid justify-items-stretch mt-8">
-            <button className="justify-self-center border-2 border-indigo-600 rounded-lg p-2" type="submit">
+            <button className="justify-self-center font-bold hover hover:border-neutral-600 hover:text-white-A700 hover:bg-neutral-600 rounded-lg p-2" type="submit">
               Submit!
             </button>
           </div>
