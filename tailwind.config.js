@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -6,15 +7,22 @@ export default {
       fontFamily: {
         candal: ["Candal"],
         roboto: ['Roboto', 'sans-serif'],
+        abc: ["Lobster", "cursive"],
+        lobster: ['Lobster', 'cursive'],
+        stylish: ['Stylish', 'cursive'],
+        ubuntu: ['Ubuntu', 'sans-serif'],
       },
       colors: {
-        hijau: "rgb(215, 245, 220)",
+        hijau: "rgb(215, 245, 220) ",
+        hijauCustom : "rgb(29, 46, 9)",
         hmuda: "rgb(250, 255, 251)",
         hfont: "rgb(32, 177, 90)",
         hitam: "rgb(0 0 0)",
         orange: "rgb(245, 95, 29)",
         putih: "rgb(255,255,255)",
         hijau2: "rgb(32, 177, 90)",
+        oren: '#EFB495',
+        kuning : '#EBEF95',
         white: { A700: "#ffffff" },
         blue_gray: { 900: "#302f2f" },
         black: {
@@ -24,9 +32,12 @@ export default {
           "900_60": "#00000060",
           "900_dd": "#000000dd",
         },
+        customColor: '#b2d6da',
+        custom : '#F6F5F2',
         green: { A700: "#20b15a" },
         blue: { 900: "#0d47a1" },
         green_800: "#168944",
+        navy : '#171f33'
       },
       spacing: {
         "5rem": "5rem",

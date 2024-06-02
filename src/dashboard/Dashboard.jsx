@@ -4,6 +4,7 @@ import { getMe } from "../features/authSlice";
 
 import { Navbar } from "./navbar/Navbar";
 import { useNavigate } from "react-router-dom";
+import Dashboard2 from "../dashboard2/Dashboard2"
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <Navbar />
+      <Dashboard2 />
     </div>
   );
 };

@@ -20,14 +20,14 @@ export const Utama2 = () => {
               </div>
               <div className="hidden sm:block sm:ml-6  justify-end">
                 <div className="flex space-x-8 ">
-                <a href="#p2" class="text-black-900 rounded-md px-3 py-2 text-sm transition duration-300 font-bold hover:bg-yellow-300 ">
+                <a href="#p2" class="text-black-900 rounded-md px-3 py-2 text-lg transition duration-300 font-bold hover:bg-hijauCustom hover:text-hijau font-stylish">
                     About BIR
                 </a>
 
-                  <a href="#p3" className="text-black-900 rounded-md px-3 py-2 text-sm font-bold transition duration-300 hover:bg-yellow-300 ">
+                  <a href="#p3" className="text-black-900 rounded-md px-3 py-2 text-lg font-stylish font-bold transition duration-300 hover:bg-hijauCustom hover:text-hijau ">
                     BIR Human
                   </a>
-                  <a href="/login" className="text-black-900 border-2 rounded-lg border-hijau2 py-2 px-6 font-bold transition duration-300 hover:bg-hijau2">
+                  <a href="/login" className="text-black-900 border-2 rounded-lg border-hijauCustom py-2 px-6 font-bold transition duration-300 hover:bg-hijauCustom hover:text-hijau text-lg font-stylish">
                     Login
                   </a>
                 </div>

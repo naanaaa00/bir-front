@@ -11,7 +11,7 @@ export const P3 = () => {
     <div id="p3" className=' p-8 m-8 h-full bg-white-A700'>
 
         <div className='flex flex-col p-4'>
-            <span className='text-hijau2 text-2xl font-bold '>Anggota Tim dan Jobdesk</span>
+            <span className='text-hijauCustom text-4xl font-bold font-stylish'>Anggota Tim dan Jobdesk</span>
             {/* <span className='font-bold text-4xl text-black-900'>We provide the perfect solution</span>
             <span className='font-bold text-4xl text-black-900'>to your business growth</span> */}
         </div>
@@ -36,11 +36,11 @@ export const P3 = () => {
             </div>
 
 
-              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900">Angga Cipta Pranata</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Tim Leader</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Backend Developer</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Create Story</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Scrum</span>
+              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900 font-abc">Angga Cipta Pranata</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Tim Leader</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Backend Developer</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Create Story</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Scrum</span>
             </div>
             {/* <div  className='flex justify-center mt-8 '>
               <span className='font-bold mr-2 text-black-900'>Learn More</span>
@@ -64,11 +64,11 @@ export const P3 = () => {
             </div>
 
 
-              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900">Daffa Muhammad Irhamni</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Frontend Developer</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Create Desain With Figma</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Searching Music</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Administrator</span>
+              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900 font-abc">Daffa Muhammad Irhamni</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Frontend Developer</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Create Desain With Figma</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Searching Music</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Administrator</span>
             </div>
             {/* <div  className='flex justify-center mt-8 '>
               <span className='font-bold mr-2 text-black-900'>Learn More</span>
@@ -93,11 +93,11 @@ export const P3 = () => {
               </div>
             </div>
 
-              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900">Waridatul Jannah</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Frontend Developer</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Create Story</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Administrator</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Scrum</span>
+              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900 font-abc">Waridatul Jannah</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Frontend Developer</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Create Story</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Administrator</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Scrum</span>
             </div>
             {/* <div  className='flex justify-center mt-8 '>
               <span className='font-bold mr-2 text-black-900'>Learn More</span>
@@ -122,10 +122,10 @@ export const P3 = () => {
               </div>
             </div>
 
-              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900">Damar Galih Aji Pradana</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Create Desain Web With Figma</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Create Logo Desain</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Create Animasi</span>
+              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900 font-abc">Damar Galih Aji Pradana</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Create Desain Web With Figma</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Create Logo Desain</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900">Create Animasi</span>
             </div>
             {/* <div  className='flex justify-center mt-8'>
             <span className='font-bold mr-2 text-black-900'>Learn More</span>
@@ -150,10 +150,10 @@ export const P3 = () => {
               </div>
             </div>
             
-              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900">Rosyid Ferdiansyah</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Backend Developer</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Create Logo Desain</span>
-              <span className="text-start font-bold italic text-lg text-black-900">Searching Music</span>
+              <span className="text-start font-bold text-4xl mt-3 mb-4 text-black-900 font-abc">Rosyid Ferdiansyah</span>
+              <span className="text-start font-bold italic text-2xl font-stylish text-black-900 ">Backend Developer</span>
+              <span className="text-start font-bold italic text-2xl text-black-900 font-stylish">Create Logo Desain</span>
+              <span className="text-start font-bold italic text-2xl text-black-900 font-stylish">Searching Music</span>
             </div>
             {/* <div className='flex justify-center mt-8'>
             <span className='font-bold mr-2 text-black-900'>Learn More</span>

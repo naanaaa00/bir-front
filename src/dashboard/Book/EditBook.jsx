@@ -3,6 +3,11 @@ import { Navbar } from "../navbar/Navbar";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import ImageIcon from '@mui/icons-material/Image';
+
+
 
 export const EditBook = () => {
   const [title, setTitle] = useState("");
@@ -61,7 +66,7 @@ export const EditBook = () => {
         title: "Success!",
         text: "Data has been sent successfully.",
       });
-      navigete("/deleteBook");
+      navigete("/dashboard2");
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
@@ -69,26 +74,44 @@ export const EditBook = () => {
     }
   };
   return (
-    <div className=" flex flex-col">
-      <Navbar />
+    <div className=" flex flex-col h-screen bg-hijau">
+     <div className="bg-hijauCustom h-16">
+    <Link to="/dashboard2">
+        <ArrowBackIcon style={{ color: 'white',margin: '15px' }} />
+    </Link>
+</div>
+
       <div className="self-center h-screen">
-        <div className="border-2 border-indigo-600 h-sc w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
+        <div className="bg-custom border-2 border-neutral-400  w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
           <p className=" bg-red-900">{msg}</p>
           <form onSubmit={updateBook}>
             <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Tittle" className="input w-full mb-6" />
-            <textarea value={summary} onChange={(e) => setSummary(e.target.value)} className="textarea textarea-warning w-full mb-6" placeholder="Summary"></textarea>
+            <textarea value={summary} onChange={(e) => setSummary(e.target.value)} className="h-44 textarea textarea-bordered w-full mb-6" placeholder="Summary"></textarea>
             <div className="p-2 flex sm:justify-around">
-              <label className="text-lg">Music</label>
-              <input onChange={loadMusic} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3" />
-              <label className="text-lg">Image</label>
-              <input onChange={loadImage} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs" />
+              {/* <label className="text-lg">Music</label>
+              <input onChange={loadMusic} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3" /> */}
+              <div className="relative">
+        <MusicNoteIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 " />
+        <input
+          type="file"
+          onChange={loadMusic}
+          className="file-input file-input-bordered file-input-xs w-full max-w-xs pl-10"
+        />
+      </div>
+              {/* <label className="text-lg">Image</label>
+              <input onChange={loadImage} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs" /> */}
+              <div className="relative w-full max-w-xs">
+        <ImageIcon className="absolute left-2 top-1/2 transform -translate-y-1/2 " />
+        <input
+          type="file"
+          onChange={loadImage}
+          className="file-input file-input-bordered file-input-xs w-full pl-10"
+        />
+      </div>
               {preview && <img src={preview} alt="preview" className="w-20 h-20" />}
             </div>
             <div className="flex justify-center mt-8">
-              <Link to={`/deleteBook`} className=" hover hover:bg-indigo-600 justify-self-center border-2 border-indigo-600 rounded-lg p-2 mr-10">
-                Back
-              </Link>
-              <button className="hover hover:bg-indigo-600  justify-self-center border-2 border-indigo-600 rounded-lg p-2 " type="submit">
+              <button className="border-2 border-hijauCustom justify-self-center font-bold hover hover:border-hijauCustom hover:text-white-A700 hover:bg-hijauCustom rounded-lg p-2" type="submit">
                 Edit!
               </button>
             </div>

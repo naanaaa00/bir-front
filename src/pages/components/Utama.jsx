@@ -37,19 +37,25 @@ export const Utama = () => {
   }, [bookid]);
 
   return (
-    <div className="bg-neutral-100 h-full flex flex-col py-24 px-7">
+    <div className="bg-hijau h-full flex flex-col py-24 px-7">
       <div className="flex justify-between items-center p-4 mb-2">
-        <h1 className="text-left text-2xl font-bold">{book.title}</h1>
-        {book.music && (
-          <div className="flex items-center justify-center">
-            <audio controls className="outline-none">
-              <source src={`http://localhost:8080/uploads/${book.music}`} type="audio/mpeg" />
-            </audio>
-          </div>
-        )}
+      <h1 className="text-left text-4xl font-bold text-hijauCustom font-abc" style={{  letterSpacing: '1px' }}>
+  {book.title}
+</h1>
+
+
+{book.music && (
+  <div className="flex items-center justify-center mt-4 bg-hijauCustom rounded-lg p-4 shadow-hijau">
+    <audio controls className="outline-none">
+      <source src={`http://localhost:8080/uploads/${book.music}`} type="audio/mpeg" style={{ textShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)' }}/>
+    </audio>
+  </div>
+)}
+
+
       </div>
 
-      <div className="w-4/5 md:w-2/5 mx-auto bg-white-A700">
+      <div className="w-4/5 md:w-2/5 mx-auto bg-hmuda">
         {msg && <p className="bg-red-900 text-white p-2 ">{msg}</p>}
         {pages.map((page) => (
           <div key={page.pageid} className="bg-white p-8">
@@ -57,7 +63,7 @@ export const Utama = () => {
               src={`http://localhost:8080/uploads/${page.image}`}
               className="text-center mb-4 w-full mx-auto object-contain"
             />
-            <p className="h-1/2 w-auto break-words text-wrap text-justify">
+            <p className="h-1/2 w-auto break-words text-wrap text-justify font-ubuntu text-lg ">
               {page.storytext}
             </p>
           </div>

@@ -28,8 +28,8 @@ export const P2 = () => {
   return (
     <div className='h-full w-full md:h-screen bg-hijau grid gap-8 justify-center items-center md:grid-cols-2 lg:grid-cols-2 box-border p-8'>
       <div className='h-auto p-8 text-balance'>
-        <h1 className='font-extrabold text-4xl text-black-900'>ABOUT BIR</h1>
-        <p id="typed-text" className='text-xl overflow-auto mt-4 tracking-wide text-black-900'></p>
+        <h1 className='font-extrabold text-4xl text-black-900 font-stylish'>ABOUT BIR</h1>
+        <p id="typed-text" className='text-xl overflow-auto mt-4 tracking-wide text-black-900 font-stylish'></p>
       </div>
       <div className='h-full p-8 md:flex md:justify-center md:items-center'>
         <img

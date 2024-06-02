@@ -3,6 +3,8 @@ import { Navbar } from "../navbar/Navbar";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ImageIcon from '@mui/icons-material/Image';
 
 export const EditPages = () => {
   const [storytext, setStorytext] = useState("");
@@ -52,7 +54,7 @@ export const EditPages = () => {
         title: "Success!",
         text: "Data has been Update successfully.",
       });
-      navigate("/deletePages");
+      navigate("/dashboard2");
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
@@ -60,23 +62,35 @@ export const EditPages = () => {
     }
   };
   return (
-    <div className="  flex flex-col">
-      <Navbar />
-      <div className=" self-center h-screen">
-        <div className="bg-neutral-100 border-2 border-indigo-600 h-55vh w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
+    <div className="  flex flex-col bg-hijau h-screen">
+    <div className="bg-hijauCustom h-16">
+    <Link to="/dashboard2">
+        <ArrowBackIcon style={{ color: 'white',margin: '15px' }} />
+    </Link>
+</div>
+      <div className=" self-center ">
+        <div className="bg-custom border-2 border-neutral-400 h-55vh w-35vw self-center p-8 rounded-3xl md:justify-center my-14 shadow-2xl">
           <p className=" bg-red-900">{msg}</p>
           <form onSubmit={updatePage}>
-            <textarea value={storytext} onChange={(e) => setStorytext(e.target.value)} className="textarea textarea-warning w-full mb-6" placeholder="Summary"></textarea>
+            <textarea value={storytext} onChange={(e) => setStorytext(e.target.value)} className="textarea textarea-bordered w-full mb-6 h-44" placeholder="Summary"></textarea>
             <div className="p-2 flex flex-col sm:flex-row sm:justify-around">
-              <input type="text" value={relatedBookId} className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3 mb-6" placeholder="relatedBookId" readOnly />
-              <input onChange={loadImage} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs" />
+              <input type="text" value={relatedBookId} className="file-input file-input-bordered file-input-xs w-full max-w-xs mr-3 mb-6 font-bold" placeholder="relatedBookId" readOnly />
+              {/* <input onChange={loadImage} type="file" className="file-input file-input-bordered file-input-xs w-full max-w-xs" /> */}
+             
+              <div className="relative w-full max-w-xs">
+    <ImageIcon className="absolute left-2 top-[25%] transform -translate-y-1/2" />
+    <input
+        type="file"
+        onChange={loadImage}
+        className="file-input file-input-bordered file-input-xs w-full pl-10"
+    />
+</div>
+
               {preview && <img src={preview} alt="preview" className="w-20 h-20" />}
             </div>
             <div className="flex justify-center  mt-8">
-              <Link to={`/deletePages`} className=" hover hover:bg-indigo-600 justify-self-center border-2 border-indigo-600 rounded-lg p-2 mr-10">
-                Back
-              </Link>
-              <button className="justify-self-center border-2 border-indigo-600 rounded-lg p-2" type="submit">
+              
+              <button className="border-2 border-hijauCustom justify-self-center font-bold hover hover:border-hijauCustom hover:text-white-A700 hover:bg-hijauCustom rounded-lg p-2" type="submit">
                 Edit!
               </button>
             </div>
